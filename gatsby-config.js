@@ -5,9 +5,11 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    'gatsby-plugin-root-import',
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
+    // `gatsby-remark-reading-time`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
