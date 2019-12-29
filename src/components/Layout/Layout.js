@@ -5,7 +5,7 @@ import "minireset.css"
 import "../../styles.css"
 import "../../prism-theme.css"
 
-import { Footer, Header } from "src/components"
+import { Footer, Header, WaveSection } from "src/components"
 import { useIsVisible } from "src/hooks"
 import { Below, Main, Wrapper } from "./styles"
 
@@ -32,7 +32,11 @@ const Layout = ({ activePage, belowTheWaves, children }) => {
           />
           <Wrapper className="background transition">
             <Main>{children}</Main>
-            <Footer />
+            <WaveSection footer>
+              <div ref={footerRef} />
+              {belowTheWaves ? <Below>{belowTheWaves}</Below> : null}
+              <Footer />
+            </WaveSection>
           </Wrapper>
         </>
       )}
