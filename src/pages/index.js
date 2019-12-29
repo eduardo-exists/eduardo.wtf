@@ -6,13 +6,8 @@ import { Layout, SEO } from "src/components"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div> */}
-    <Link to="/page-2/">Go to page 2</Link>
+    <h1>Hello!</h1>
+    <p>This site is a work in progress! Soon this will be a centralized hub of stuff about ed!</p>
   </Layout>
 )
 
