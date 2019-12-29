@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
+// import { StaticQuery, graphql } from 'gatsby'
 import 'minireset.css'
 import '../../styles.css'
 import '../../prism-theme.css'
