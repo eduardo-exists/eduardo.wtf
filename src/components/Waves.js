@@ -14,13 +14,33 @@ const Canvas = styled.canvas`
 	${props => (props.invert ? 'transform: scale(1, -1);' : '')}
 `
 
+function transparentify(target, background, alpha) { 
+	return target.map((val, index) => {
+		const c_t = target[index]
+		const c_b = background[index]
+		return Math.round((c_t - c_b + c_b*alpha)/alpha)
+	})
+}
+
 // colour values as [dark, light]
 // convert to tuples in form [min, range]
+
+const target = [219, 112, 148]
+const b_l = [213, 226, 235]
+const b_d = [47, 61, 76]
+
+const [rl, gl, bl] = transparentify(target, b_d, .8375)
+const [rd, gd, bd] = transparentify(target, b_l, .85)
+
 const ranges = [
-	[45, 66], // red
-	[178, 208], // green
-	[176, 202], // blue
+	// [45, 66], // red
+	// [178, 208], // green
+    // [176, 202], // blue
+    [rd, rl], // red
+	[gd, gl], // green
+	[bd, bl], // blue
 ].map(([dark, light]) => [dark, light - dark])
+console.log(ranges)
 const frameCount = Math.floor(200 / 16)
 
 // pre-calculate the transition frame colours
@@ -29,7 +49,7 @@ const frames = Array.from(Array(frameCount + 1), (_, frame) =>
 		...ranges.map(([min, range]) =>
 			Math.floor(min + (range * frame) / frameCount)
 		),
-		0.29
+		.29
 	)
 )
 

@@ -1,12 +1,30 @@
 import React from "react"
-
-import { Layout, SEO } from "src/components"
+import { Layout, SEO, WaveSection,Link } from "src/components"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hello!</h1>
-    <p>This site is a work in progress! Soon this will be a centralized hub of stuff about ed!</p>
+    <WaveSection>
+      <h1 className="intro-title">Hello!</h1>
+      <p>
+        This site is a work in progress! Soon this will be a centralized hub of
+        stuff about ed!
+      </p>
+      <br />
+      <p>
+        <Link to="/blog" button>
+          All Posts
+        </Link>
+        &nbsp;
+        <Link to="/projects" secondary button>
+          Projects
+        </Link>
+        &nbsp;
+        <Link to="/resume" secondary button>
+          Resume
+        </Link>
+      </p>
+    </WaveSection>
   </Layout>
 )
 
