@@ -22,9 +22,7 @@ function transparentify(target, background, alpha) {
 	})
 }
 
-// colour values as [dark, light]
-// convert to tuples in form [min, range]
-
+// const target = [255, 239, 213]
 const target = [219, 112, 148]
 const b_l = [213, 226, 235]
 const b_d = [47, 61, 76]
@@ -32,6 +30,8 @@ const b_d = [47, 61, 76]
 const [rl, gl, bl] = transparentify(target, b_d, .8375)
 const [rd, gd, bd] = transparentify(target, b_l, .85)
 
+// colour values as [dark, light]
+// convert to tuples in form [min, range]
 const ranges = [
 	// [45, 66], // red
 	// [178, 208], // green
