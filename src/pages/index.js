@@ -20,7 +20,7 @@ const IndexPage = () => (
           Projects
         </Link>
         &nbsp;
-        <Link to="/eduardo_escoto_resume.pdf" secondary button>
+        <Link to={"/eduardo_escoto_resume.pdf"} external secondary button>
           Resume
         </Link>
       </p>

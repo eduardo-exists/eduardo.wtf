@@ -23,7 +23,7 @@ const Header = ({ activePage, footerIsVisible, siteTitle }) => (
 					<Icon name="Rocket" />
 					<span>Projects</span>
 				</NavLink>
-				<NavLink active={activePage === 'resume'} to="/eduardo_escoto_resume.pdf">
+				<NavLink active={activePage === 'resume'} external to={"/eduardo_escoto_resume.pdf"}>
 					<Icon name="Info" />
 					<span>Resume</span>
 				</NavLink>
