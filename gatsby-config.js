@@ -10,7 +10,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-remark-reading-time`,
+    // `gatsby-remark-reading-time`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
